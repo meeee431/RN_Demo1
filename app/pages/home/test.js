@@ -58,7 +58,11 @@ export default class test extends Component {
     const log = this.state.log.filter(l => l.id !== id);
     this.setState({ log });
   }
-
+    // 得到焦点事件
+    onsearchFocus = () => {
+      this.props.navigation.navigate("Search");
+      console.log('onsearchFocus');
+  }
   render() {
     return (
       <MenuProvider style={{flex: 1}}>

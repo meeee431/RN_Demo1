@@ -6,25 +6,20 @@
 import React, { Component } from "react";
 import { View, Text, Image,Button } from "react-native";
 import {Styles} from "./styles/HomeStyle";
-import Head from './Head';
-export default class Home extends Component {
-    constructor(props) {
-        super(props);
+export default class Search extends Component {
  
-    }
-     
     static navigationOptions = ({ navigation }) => ({
        
-        header:(<View></View>)
+        title: `Chat with 111`,
+ 
     } );
     
     render() {
- 
         return (
 
-            <View style={Styles.view_container}>
-                <Head navigation={this.props.navigation}></Head>
- 
+            <View style={[Styles.view_container,{backgroundColor:'red',flex:1}]}>
+                 
+                
             </View>
 
         );

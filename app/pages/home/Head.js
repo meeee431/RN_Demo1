@@ -24,10 +24,17 @@ import {
 
 const { Popover, SlideInMenu } = renderers
 export default class Head extends Component {
-
+    
+    constructor(props) {
+        super(props);
+ 
+    }
     onselectedIndexChange = (index) => console.log('change to', index)
     // 得到焦点事件
     onsearchFocus = () => {
+        const { navigate } = this.props.navigation;
+        navigate('Search', { user: 'Jane' });
+ 
         console.log('onsearchFocus');
     }
 
@@ -101,8 +108,8 @@ export default class Head extends Component {
 const styles = StyleSheet.create({
  
     divider: {
-        marginVertical:1,
-        marginHorizontal: 1,
+        marginVertical:5,
+        marginHorizontal: 2,
         borderBottomWidth: 1,
         borderColor: Colors.font
     },
