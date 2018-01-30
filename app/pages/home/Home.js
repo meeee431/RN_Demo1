@@ -15,7 +15,9 @@ export default class Home extends Component {
      
     static navigationOptions = ({ navigation }) => ({
        
-        header:(<View></View>)
+        header:null,
+        
+
     } );
     
     render() {
